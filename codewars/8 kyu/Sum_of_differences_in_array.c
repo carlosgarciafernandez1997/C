@@ -24,7 +24,7 @@ int int_desc_cmp (const void *a, const void *b) { return (*(int*)b - *(int*)a); 
 
 int diffsum(const int *arr, size_t n)
 {
-  int *result = calloc(sizeof(int),n);
+  int *result = calloc(n,sizeof(int));
   memcpy(result, arr, n * sizeof(int));
   qsort(result, n, sizeof(int), int_desc_cmp);
   return result[0]-result[n-1];
